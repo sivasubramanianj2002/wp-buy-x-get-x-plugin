@@ -1,0 +1,9 @@
+{
+    "name": "shiva/buy-x-get-x",
+    "autoload": {
+        "psr-4": {
+            "BXGX\\": ""
+        }
+    },
+    "require": {}
+}

@@ -1,0 +1,139 @@
+/* Minimalistic form container */
+.bxgx-product-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+/* Search input */
+#bxgx_product_search {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding: 5px;
+    flex-grow: 1;
+    background-color: transparent;
+    color: #333;
+}
+
+/* Selected products inside search bar */
+#selected_products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+/* Individual selected product */
+#selected_products .bxgx-product {
+    background-color: #e9e9e9;
+    padding: 6px 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Remove icon (minimalist design) */
+#selected_products .bxgx-remove-product {
+    margin-left: 5px;
+    color: #ff0000;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Dropdown list */
+#bxgx_product_dropdown {
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Dropdown list items */
+#bxgx_product_dropdown .list-group-item {
+    padding: 8px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+/* Dropdown item hover */
+#bxgx_product_dropdown .list-group-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Submit button */
+button[type="submit"] {
+    background-color: #0073aa;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #005f8d;
+}
+
+/* Optional adjustments for minimalistic appearance */
+label, .description {
+    font-size: 14px;
+    color: #555;
+}
+
+h1 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+#toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.toast {
+    background: #333;
+    color: #fff;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    animation: fadeOut 3s forwards;
+}
+
+.toast.success { background: #28a745; }
+.toast.error { background: #dc3545; }
+.toast.warning { background: #ffc107; color: #333; }
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(10px); }
+}
+
